@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+     /*scroll-behavior: smooth; i will delete it here because if i added it and add the '/smooth-scroll.polyfills' in js it will be slow.
+    IN "chrome" not in "firefox"*/
+}
+
+html{
+    font-size: 62.5%;     
+    
+    @media only screen and (max-width: 75em;){
+        font-size: 56.25%; 
+    }
+    @media only screen and (max-width: 62.5em;){
+        font-size: 50%;
+    }
+
+    @media only screen and(max-width: 56.25em;) {
+        font-size: 43.75%;  
+    }
+    
+    @media only screen and(max-width: 37.5em;){
+        font-size: 37.5%;
+    }
+   
+}
+
+
+body{
+    height: 100vh;
+    /*overflow: hidden; */ /* To remove the scroll bar */
+}
+
+.container{ 
+    width: 100%;
+    height: 100%;
+    /* Css Smooth-scroll */
+   /* overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;  */
+}
+
+header{
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #10631A;
+    font-size: 1.8em; /* 1em is based on body font-size if we define the font-size in body; ex: 20px
+     => then 1em = 20px; but here we do not defien the font size so it will be the default font size of the browser so it's 16px */
+    text-decoration: none;
+}
+.navigation a{
+    color: #10631A;
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding-left: 30px;
+    text-decoration: none;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.navigation a:hover{
+    color: #334F00;
+}
+
+section{
+    /*width: 100%;
+    height: 100vh; for scroll-snap to work */
+    /* Scroll snap */
+    scroll-snap-align: center;
+}
+.main{
+    min-height: 100vh;
+    min-width: 100%;
+   /* background-image: linear-gradient( rgba(255, 255, 255, .3), rgba(255, 255, 255, .9)); */
+    background-image: linear-gradient(#C3C3AE, #4E4E45);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color:#C3C3AE;
+    /*padding-top: 63px;*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 200px;
+}
+.main span{
+    color: #10631A;
+    font-weight: 500;
+    font-size: 5rem; 
+}
+.name{
+    font-size: 2rem;
+}
+
+.main h3{
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.main div *{
+    margin-bottom: 20px;
+}
+
+.main-btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #10631A;
+    font-size: 1.1em;font-weight: 600;
+    color: #f0f0f0;
+    border-radius: 7px;
+    padding: 15px 30px;
+    transition: all .2s ease;
+    letter-spacing: 1px;
+}
+
+.main-btn:hover{
+    transform: scale(1.1);
+    background-color: #334F00;
+}
+
+.social-icons a{
+    display: inline-block;
+    color: #fff;
+    padding-right: 30px;
+    font-size: 3rem;
+}
+
+.cards{
+    margin: 100px auto;
+    padding: 3em;
+}
+
+.title{
+    color: #C3C3AE;
+    font-weight: 600;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+    /*column-gap: 50px;
+    row-gap: 50px; */
+}
+
+.card{
+    box-shadow: 0 5px 25px rgba(0, 0, 0,.15);
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    transition: all .2s ease;
+    margin: 50px;
+    flex: 0 0 25em;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.icon{
+    color: #10631A;
+    font-size: 8em;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.info h3{
+    color: #10631A;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+}
+
+.info p {
+    padding: 10px 30px;
+    margin-bottom: 20px;
+} 
+
+
+.more-details{
+    text-decoration: none;
+    color: #10631A;
+}
+
+.more-details:hover{
+    color: #334F00;
+}
+
+.contact{
+    padding: 3em;
+      background-color: #e3e3e3;
+}
+
+.contact .icon{
+    font-size: 4.5rem;
+}
+.contact .info h3{
+    color: #000;
+}
+
+.contact .info p{
+    font-size: 1.5rem;
+}
+
+.footer{
+    background-color: #88CC88;
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.copyright{
+    color: #fff;
+    font-weight: 700;
+}
+
+.copyright span{
+    color: #10631A;
+}
+
+
+.projects{
+    padding: 2rem 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    position: relative;
+}
+
+.project__card{
+    box-shadow: 0 1rem 2rem #eee;
+    height: 51rem;
+    width: 30rem;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all .2s ;
+    position: relative;
+
+}
+
+.project__card:hover{
+        transform: translateY(-1.5rem);
+    }
+
+.package__picture{
+        height: 23rem;
+        width: 100%;
+}
+
+    
+
+        .package__img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        
+    
+
+    .package__heading{
+        text-align: center;
+        transform: translateY(-2.5rem);
+}
+        .package__heading--span{
+            background-color: #88CC88;
+            display: inline-block;
+            padding: .5rem 1rem;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+   
+
+    .package__details{
+        padding: 1.5rem 3rem;
+        font-size: 1.5rem;
+        margin-top: -3rem;
+        height: 14rem;
+}
+
+        .package__details--list{
+            padding: .5rem 2rem;
+        }
+        
+
+        .package__details--item{
+            padding: 0;
+            margin: 0;
+            list-style: square;
+        }
+        .btn-text:link,
+        :visited{
+                font-size: 1.5rem;
+                text-decoration: none;
+                color: #876445;
+                padding: 3px;
+                border-bottom: 1px solid #876445;
+                display: inline-block;
+                transition: all .2s;
+            }
+        
+            .btn-text:hover{
+                background-color: #876445;
+                color: #fff;
+                box-shadow: 0 1rem 2rem rgba(0,0,0,.15);
+                transform: translateY(-2px);
+            }
+        
+            .btn-text:active{
+                box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+                transform: translateY(0);
+            }
+
+
+@media only screen and (max-width:64em ){
+    header{
+        padding: 10px 20px;
+    }
+
+    .main span{
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 48em){
+    body{
+        font-size: 12px;
+    }
+
+    header{
+        padding: 10px 33px;
+    }
+
+    .main{
+        padding: 10px 97px;
+    }
+
+}
+
+@media only screen and (max-width: 25em){
+    header{
+        padding: 10px 15px;
+    }
+
+    .footer{
+        flex-direction: column;
+    }
+
+    .copyright{
+        margin-bottom: 1em;
+    }
+
+    .social-icons{
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 20em){
+    body{
+        font-size: 8px;
+    }
+
+    header{
+        padding: 10px 12px;
+    }
+    
+    .main{
+        padding: 20px;
+    
+    }
+
+    .project__info{
+        padding: .5em;
+    }
+
+    .project__title{
+        display:flex;
+        margin-bottom: 1em;
+
+    }
+
+    .project__title > *{
+        padding-right: 1em;
+    }
+
+}
